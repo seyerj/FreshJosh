@@ -19,7 +19,7 @@ choco install putty -y
 Choco install Filezilla -y
 
 # Install teamviewer
-choco install teamviewer -y 
+#choco install teamviewer -y 
 
 # Install RSAT Remote Server Admin Tools
 choco install rsat -y
@@ -42,6 +42,9 @@ choco install nmap -y
 # Install TFTPD
 choco install tftpd32 -y
 
+# Install Virustotal Desktop Plugin
+choco install virustotaluploader -y
+
 # Install googlechrome
 choco install googlechrome -y
 
@@ -52,10 +55,10 @@ choco install firefox -y
 choco install brave -y
 
 # Install Java
-choco install javaruntime -y
+#choco install javaruntime -y
 
 # Install Flash
-choco install flashplayerplugin -y
+#choco install flashplayerplugin -y
 
 # Install Adobe Reader
 choco install adobereader -y
@@ -66,8 +69,14 @@ choco install notepadplusplus -y
 # Install VS Code
 choco install vscode -y
 
+# Install WinSCP
+choco install winscp -y
+
 # Install Git
 choco install git.install -y
+
+# Install Github Desktop
+choco install github-desktop -y
 
 # Install Chocolatey GUI
 choco install chocolateygui -y
@@ -85,20 +94,11 @@ choco install rufus -y
 choco install imgburn -y
 
 # Dameware?
-# Paul's Inventory Tool?
-# Set-ExecutionPolicy RemoteSigned?
+
+# Set PS Execution Policy
+Set-ExecutionPolicy RemoteSigned
 
 # Kace
-#copy installer from network share
-copy-item -Path \\dcit\SOFTWARE\KACE\ampagent-10.0.113-x86.kace-mgmt.co.douglas.or.us.msi -Destination C:\temp\
-
-# Install Kace Silently
-msiexec.exe /I C:\temp\ampagent-10.0.113-x86.kace-mgmt.co.douglas.or.us.msi /q
-
-# Install RSAT off the software share
-#Invoke-Command -Computername $software -ScriptBlock {
-#    Start-process "\\dcit\SOFTWARE\Microsoft\Windows\Windows10\RSAT\WindowsTH-RSAT_WS_1803-x64.msu" /quiet /norestart
-#    }
 
 # Install RSAT off the Internet
 $Install = Get-WindowsCapability -Online | Where-Object {$_.Name -like "Rsat*" -AND $_.State -eq "NotPresent"}
