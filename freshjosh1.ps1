@@ -93,6 +93,15 @@ choco install rufus -y
 # Install Imgburn
 choco install imgburn -y
 
+# Install Windows System Control Center
+choco install windowssystemcontrolcenter -y 
+
+# Install Virustotal Uploader
+choco install virustotaluploader -y
+
+# Install Github Desktop
+choco install github-desktop -y
+
 # Dameware?
 
 # Set PS Execution Policy
