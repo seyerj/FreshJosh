@@ -22,7 +22,7 @@ Choco install Filezilla -y
 #choco install teamviewer -y 
 
 # Install RSAT Remote Server Admin Tools
-choco install rsat -y
+Get-WindowsCapability -Name RSAT* -Online | Add-WindowsCapability -Online
 
 # Install Sysinternals
 choco install sysinternals -y
@@ -30,8 +30,8 @@ choco install sysinternals -y
 # Install Windows Assessment and Deployment Kit
 choco install windows-adk-all -y
 
-# Install VMWare vShpere Client
-choco install vmwarevsphereclient -y
+# Install VMWare vShpere Player
+choco install vmware-workstation-player -y
 
 # Install Wireshark
 choco install wireshark -y
@@ -61,13 +61,13 @@ choco install brave -y
 #choco install flashplayerplugin -y
 
 # Install Adobe Reader
-choco install adobereader -y
+#choco install adobereader -y
 
 # Install Notepad ++
 choco install notepadplusplus -y
 
 # Install VS Code
-choco install vscode -y
+#choco install vscode -y
 
 # Install WinSCP
 choco install winscp -y
@@ -76,7 +76,7 @@ choco install winscp -y
 choco install git.install -y
 
 # Install Github Desktop
-choco install github-desktop -y
+#choco install github-desktop -y
 
 # Install Chocolatey GUI
 choco install chocolateygui -y
@@ -84,23 +84,18 @@ choco install chocolateygui -y
 # Install Treesize (free)
 choco install treesizefree -y
 
-# Install Greenshot
-choco install greenshot -y
-
 # Install Rufus
 choco install rufus -y
 
 # Install Imgburn
-choco install imgburn -y
+#choco install imgburn -y
 
 # Install Windows System Control Center
 choco install windowssystemcontrolcenter -y 
 
-# Install Virustotal Uploader
-choco install virustotaluploader -y
+# Install Windows Admin Center - need Winget/Win 11
+winget install -e --id Microsoft.WindowsAdminCenter
 
-# Install Github Desktop
-choco install github-desktop -y
 
 # Dameware?
 
